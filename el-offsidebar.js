@@ -91,7 +91,7 @@
 
 		// copy content
 		// clone with bindings
-		$(settings.sidebar).clone(true, true).appendTo(settings.elSidebar);
+		$(settings.sidebar).children().clone(true, true).appendTo(settings.elSidebar);
 		
 		// if we change browser height
 		props.sh = $(settings.elSidebar).height();
