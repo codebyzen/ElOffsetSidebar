@@ -17,7 +17,8 @@ Example:
   - add hide button at top of original sidebar contents ( a with classes "btn btn-success el-sidebar-btn" and image)
   - insert script link at bottom (el-offsidebar.js)
   - after link add code 		
-  - ```javascript
+
+```javascript
 	$.fn.elSidebar({
 		sidebar		: '.blog-sidebar',			// real sidebar
 		sidebarBtn	: '.el-sidebar-btn',		// show/hide sidebar button
