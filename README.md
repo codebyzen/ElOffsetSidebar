@@ -3,4 +3,4 @@ ElOffsetSidebar
 
 jQuery plugin to make sidebar
 
-[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ggQyHoUowaE/0.jpg)](http://www.youtube.com/watch?v=ggQyHoUowaE)
