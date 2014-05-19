@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Eloffsetsidebar by ugputu</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Eloffsetsidebar</h1>
+        <p>jQuery plugin to make sidebar</p>
+
+        <p class="view"><a href="https://github.com/ugputu/ElOffsetSidebar">View the Project on GitHub <small>ugputu/ElOffsetSidebar</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ugputu/ElOffsetSidebar/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ugputu/ElOffsetSidebar/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ugputu/ElOffsetSidebar">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="eloffsetsidebar" class="anchor" href="#eloffsetsidebar"><span class="octicon octicon-link"></span></a>ElOffsetSidebar</h1>
+
+<p>jQuery plugin to make Offcanvas sidebar</p>
+
+<p><a href="http://www.youtube.com/watch?v=ggQyHoUowaE"><img src="http://img.youtube.com/vi/ggQyHoUowaE/0.jpg" alt="IMAGE ALT TEXT HERE"></a></p>
+
+<p>^^^ youtube link</p>
+
+<p>Example:</p>
+
+<ul>
+<li>i take simple bootstrap example with sidebar</li>
+<li>append <code>&lt;div id="el-sidebar-nav"&gt;</code> after body tag</li>
+<li>wrap all contents to <code>&lt;div id="el-wrapper"&gt;</code>
+</li>
+<li>add show sidebar button (a with class "el-sidebar-btn" and some image or text)</li>
+<li>add hide button at top of original sidebar contents (a with class "el-sidebar-btn" and some image or text)</li>
+<li>insert script link at bottom (<code>&lt;script type='text/javascript' src='el-offsidebar.js?ver=0.2'&gt;&lt;/script&gt;</code>)</li>
+<li>after link add code<br>
+</li>
+</ul><div class="highlight highlight-javascript"><pre>    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">elSidebar</span><span class="p">({</span>
+        <span class="nx">sidebar</span>     <span class="o">:</span> <span class="s1">'.blog-sidebar'</span><span class="p">,</span>          <span class="c1">// real sidebar</span>
+        <span class="nx">sidebarBtn</span>  <span class="o">:</span> <span class="s1">'.el-sidebar-btn'</span><span class="p">,</span>        <span class="c1">// show/hide sidebar button</span>
+        <span class="nx">elSidebar</span>   <span class="o">:</span> <span class="s1">'#el-sidebar-nav'</span><span class="p">,</span>        <span class="c1">// el sidebar</span>
+        <span class="nx">elWrapper</span>   <span class="o">:</span> <span class="s1">'#el-wrapper'</span>             <span class="c1">// el wrapper</span>
+    <span class="p">});</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ugputu">ugputu</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
