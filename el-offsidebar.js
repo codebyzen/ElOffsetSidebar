@@ -25,7 +25,8 @@
 			sidebar: ".blog-sidebar",
 			sidebarBtn: ".el-sidebar-btn",
 			elSidebar: '#el-sidebar-nav',
-			elWrapper: '#el-wrapper'
+			elWrapper: '#el-wrapper',
+			elMuteLayer: '#el-offsidebar-mute-layer'
 		}, options );
 
 		var props = {
@@ -44,12 +45,11 @@
 			'left':				'-100%',
 			'box-shadow':		'0px 0px 150px 1px black',
 			'opacity':			'0',
+			'display': 			'none'
 		});
 
 		function resizeElSidebar() {
 
-			$('#deb').html(parseInt(props.sh)+' - '+parseInt($(window).height()));
-			
 			if (parseInt(props.sh)<parseInt($(window).height())) {
 				$(settings.elSidebar).css({'height':parseInt($(window).height())});
 			} else {
@@ -60,17 +60,33 @@
 		
 		function init() {
 			if (parseInt($(settings.elSidebar).css('left'))=='0') {
-				// turn it to hidden state (now it visible)
+				
+				// let's turn it off
+				
 				props.l = '-100%'; 
 				props.o = 0;
-				$(settings.elWrapper).fadeIn('slow');
+				
+				// show content
+				$(settings.elWrapper).show();
+
+				// hide mute layer
+				$(settings.elMuteLayer).fadeOut('slow');
+
 			} else {
-				// show sidebar (now hidden)
+
+				// let's show sidebar
+				
 				$(settings.elSidebar).show();
+
 				// if sidebar smaller then body we make height 100%
 				resizeElSidebar();
+
 				
-				$(settings.elWrapper).fadeOut('slow');
+				$(settings.elMuteLayer).fadeIn('slow', function(){
+					$(settings.elWrapper).hide();
+				});
+				
+				
 				props.l = 0;
 				props.o = 1;
 			}
@@ -78,6 +94,7 @@
 
 
 		function sidebarAnimation(){
+			$('html').css({'overflow':'hidden'});
 			$(settings.elSidebar).animate({
 				left: 		props.l,
 				opacity: 	props.o
@@ -85,9 +102,27 @@
 				if (props.l!=0) {
 					$(settings.elSidebar).hide();
 				}
-			});			
+				$('html').css({'overflow':'auto'});
+			});	
+			
 		}
 		
+		// create mute div
+		$(settings.elWrapper).prepend('<div id="'+settings.elMuteLayer.replace('#','')+'"></div>');
+		$(settings.elMuteLayer).css({
+			'display': 'none',
+			'width': '100%',
+			'height': '100%',
+			'position': 'absolute',
+			'top': '0',
+			'left': '0',
+			'background-color': 'white',
+			'z-index': '10000'
+		});
+		
+
+		// fix zindex of content
+		$(settings.elWrapper).css({'z-index':'0'});
 
 		// copy content
 		// clone with bindings
