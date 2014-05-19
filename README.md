@@ -11,11 +11,11 @@ jQuery plugin to make Offcanvas sidebar
 
 Example:
   - i take simple bootstrap example with sidebar
-  - append div with id el-sidebar-nav after body tag
-  - wrap all contents to div with id "el-wrapper"
-  - add show sidebar button ( a with classed "btn btn-success el-sidebar-btn" and some image)
-  - add hide button at top of original sidebar contents ( a with classes "btn btn-success el-sidebar-btn" and image)
-  - insert script link at bottom (el-offsidebar.js)
+  - append `<div id="el-sidebar-nav">` after body tag
+  - wrap all contents to `<div id="el-wrapper">`
+  - add show sidebar button (a with class "el-sidebar-btn" and some image or text)
+  - add hide button at top of original sidebar contents (a with class "el-sidebar-btn" and some image or text)
+  - insert script link at bottom (`<script type='text/javascript' src='el-offsidebar.js?ver=0.2'></script>`)
   - after link add code 		
 
 ```javascript
